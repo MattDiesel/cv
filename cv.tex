@@ -1,0 +1,105 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper
+            , portrait
+            , textwidth=15cm
+            % , textwidth=11cm
+            % , lmargin=7.5cm
+            % , marginparwidth=5cm
+            % , marginparsep=2mm
+    ]{geometry}
+
+
+% Hyperlinks
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+
+% Main body tables
+\usepackage{supertabular}
+\usepackage{array}
+\newcolumntype{R}[1]{>{\raggedleft\scshape }m{#1}<{ }}
+\def \rowdiv {\multicolumn{2}{c}{} \\}
+
+
+% Section headers
+\usepackage{titlesec}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1em}{3pt}
+
+
+% Side bar
+\usepackage{mdframed}
+\reversemarginpar
+
+
+% Side bar list
+\usepackage{enumitem}
+\setlist[description]{style=multiline,font=\normalfont}
+
+\usepackage{graphicx,fontawesome}
+\definecolor{myblue}{RGB}{29,57,127}
+\newcommand{\sbicon}[1]{\textcolor{myblue}{\csname #1\endcsname}}
+
+
+\begin{document}
+\pagestyle{empty}
+
+
+% Title
+    % \par{\centering
+    %     {\Huge \textsc{Matt Diesel}
+    % }\bigskip\par}
+
+
+% \marginpar{%
+%     \begin{mdframed}[backgroundcolor=blue!20] 
+%         \begin{description}
+%             \item[\sbicon{faAt}]    M@ttDiesel.co.uk
+%             \item[\sbicon{faPhone}]   07980341569
+%             \item[\sbicon{faMapMarker}]  \footnotesize{St. Catharine's College \\ Cambridge \\ CB2 1RL}
+%         \end{description}
+%     \end{mdframed}
+% }
+
+
+% Summary
+    \noindent Fourth year Engineer at the University of Cambridge, specialising in information, computing and control. Experienced in applying extensive development skills to a broad range of engineering problems, with strong teamwork skills epitomised by sporting and group project successes.
+
+
+\section{Education}
+    \begin{tabular}{R{2cm}|p{12cm}}
+        2017        & \textbf{MEng, University of Cambridge} \\
+                    & \footnotesize{Specialising in modules on information, computing, control and mechanics. Fourth year project on parallisation and datastructures for Adaptive Mesh Refinement techniques for use in Computational Fluid Dynamics. } \\ \rowdiv
+        2012        & A Levels, Balcarras School Cheltenham \\
+                    & \footnotesize{A*AA in Maths, Further Maths and Physics. A in AS History. Distinction in the AQA EPQ, on the design and development of a programming language similar in notation to algebra} \\ \rowdiv
+        2010        & GCSEs, Balcarras School Cheltenham \\
+                    & \footnotesize{A*s in Maths, Sciences and English. As in Literature, French, Geography, History, Design and Technology, Religious Studies and Music} \\
+    \end{tabular}
+
+
+\section{Work Experience}
+    \begin{tabular}{R{2cm}|p{12cm}}
+        Current     & Engineer \textsc{GroupHES Ltd.}, Gloucester \\
+                    & \footnotesize{For three years I have worked for three months in the summer at GroupHES Ltd, initially in the Branch Hydraulic Systems division though in the last year for the newly formed Automatec controls division, which I was involved in from an early conceptual stage. The majority of my project work there has been using Labview and Danfoss' proprietary Plus+1 language to develop control systems for hydraulic applications in both industrial and off road automative applications. Some of the key projects I have been involved in are:} \\
+        2016        & \footnotesize{Designed and developed part of a Data Acquisition package for wind turbines reaching the end of their service life.} \\
+        2015        & \footnotesize{Developed the control system and operator interface for an engine startup simulator for use in testing F1 starter motors. I was involved in the project from the conceptual design phase, which involved working closely with the research division of a leading F1 team.} \\
+        2014        & \footnotesize{Implemented the control and automated sequencing of a 3 link trailer mounted manipulator for collecting and stacking bales.} \\ \rowdiv
+        Oct - Feb   & Support Analyst \textsc{ViziRail}, Adelaide \\
+        2013        & \footnotesize{Worked on large database hotfix scripts applied to the backend of the core ViziRail product, which schedules trains for the majority of Australia's freight rail network.} \\
+    \end{tabular}
+
+\section{Notable Projects}
+
+
+\section{Skills and Interests}
+    \begin{tabular}{R{2cm}|p{12cm}}
+        Computing   & My key interests have been compiler construction and parallel or large scale computational problems. Both of these require the use of high level software design along with low level programming knowledge. With 8 years of programming experience now, I have worked on a broad range of applications, ranging from robotics to full stack web development. I have also worked with a large number of different languages, though the bulk of my work has been in C++, C\# and Labview. \\ \rowdiv
+        Mechanical  & Rebuilt a classic Vespa scooter in 2012, and have helped on other peoples similar vehicle rebuilds. \\ \rowdiv
+        Sporting    & Compete for the University Hockey third team, as well as having captained the college mens side in 2015 to win the intercollegiate cup. In 2014 I captained the college mixed hockey team. In addition, I represent the college in rugby, cricket, lacrosse (captain in 2014) and netball (captain in 2014) amongst other minor sports.  \\
+                    & I am currently Webmaster for the University Hockey Club, and Secretary of the Kitten Club, the sporting society of St. Catharine's.  \\ \rowdiv
+    \end{tabular}
+
+
+\end{document}
