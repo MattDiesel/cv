@@ -17,9 +17,13 @@
 
 
 % Main body tables
+\usepackage[usestackEOL]{stackengine}
+\edef\tmp{\the\baselineskip}
+\setstackgap{L}{\tmp}
+
 \usepackage{supertabular}
-\usepackage{array}
-\newcolumntype{R}[1]{>{\raggedleft\scshape }m{#1}<{ }}
+\usepackage{array,ragged2e}
+\newcolumntype{R}[1]{>{\scshape\raggedleft }p{#1}<{ }}
 \def \rowdiv {\multicolumn{2}{c}{} \\}
 
 
@@ -69,25 +73,28 @@
 
 
 \section{Education}
-    \begin{tabular}{R{2cm}|p{12cm}}
-        2017        & \textbf{MEng, University of Cambridge} \\
-                    & \footnotesize{Specialising in modules on information, computing, control and mechanics. Fourth year project on parallisation and datastructures for Adaptive Mesh Refinement techniques for use in Computational Fluid Dynamics. } \\ \rowdiv
-        2012        & A Levels, Balcarras School Cheltenham \\
-                    & \footnotesize{A*AA in Maths, Further Maths and Physics. A in AS History. Distinction in the AQA EPQ, on the design and development of a programming language similar in notation to algebra} \\ \rowdiv
-        2010        & GCSEs, Balcarras School Cheltenham \\
-                    & \footnotesize{A*s in Maths, Sciences and English. As in Literature, French, Geography, History, Design and Technology, Religious Studies and Music} \\
+    \begin{tabular}{R{3cm}|p{11cm}}
+        \Longunderstack[r]{MEng \\ Cambridge \\ June 2017} 
+                    & Specialising in modules on information, computing, control and mechanics. Fourth year project on parallisation and datastructures for Adaptive Mesh Refinement techniques for use in Computational Fluid Dynamics. \\
+                    & Awarded departmental prizes for group project work in first and third years, the former for a trading simulator and the latter the design of a digital circuit simulator. \\ \rowdiv
+        \Longunderstack[r]{A Levels \\ Balcarras \\ Cheltenham \\ 2013}
+                    & A*AA in Maths, Further Maths and Physics. A in AS History. Distinction in the AQA EPQ, on the design and development of a programming language similar in notation to algebra. \\ \rowdiv
+        % \Longunderstack[r]{GCSEs \\ Balcarras \\ Cheltenham \\ 2011}
+        %             & A*s in Maths, Sciences and English. As in Literature, French, Geography, History, Design and Technology, Religious Studies and Music. \\
     \end{tabular}
 
 
 \section{Work Experience}
-    \begin{tabular}{R{2cm}|p{12cm}}
-        Current     & Engineer \textsc{GroupHES Ltd.}, Gloucester \\
-                    & \footnotesize{For three years I have worked for three months in the summer at GroupHES Ltd, initially in the Branch Hydraulic Systems division though in the last year for the newly formed Automatec controls division, which I was involved in from an early conceptual stage. The majority of my project work there has been using Labview and Danfoss' proprietary Plus+1 language to develop control systems for hydraulic applications in both industrial and off road automative applications. Some of the key projects I have been involved in are:} \\
-        2016        & \footnotesize{Designed and developed part of a Data Acquisition package for wind turbines reaching the end of their service life.} \\
-        2015        & \footnotesize{Developed the control system and operator interface for an engine startup simulator for use in testing F1 starter motors. I was involved in the project from the conceptual design phase, which involved working closely with the research division of a leading F1 team.} \\
-        2014        & \footnotesize{Implemented the control and automated sequencing of a 3 link trailer mounted manipulator for collecting and stacking bales.} \\ \rowdiv
-        Oct - Feb   & Support Analyst \textsc{ViziRail}, Adelaide \\
-        2013        & \footnotesize{Worked on large database hotfix scripts applied to the backend of the core ViziRail product, which schedules trains for the majority of Australia's freight rail network.} \\
+    \begin{tabular}{R{3cm}|p{11cm}}
+        \Longunderstack[r]{Engineer \\ GroupHES Ltd. \\ Gloucester \\ June-Sept \\ 2013-Current}
+            & For three years I have worked for three months in the summer at GroupHES Ltd, initially in the Branch Hydraulic Systems division though in the last year for the newly formed Automatec controls division, which I was involved in from an early conceptual stage. The majority of my project work there has been using Labview and Danfoss' proprietary Plus+1 language to develop control systems for hydraulic applications in both industrial and off road automative applications. Some of the key projects I have been involved in are:
+            \begin{description}
+                \item[2017] Designed and developed part of a Data Acquisition package for wind turbines reaching the end of their service life.
+                \item[2016] Developed the control system and operator interface for an engine startup simulator for use in testing F1 starter motors. I was involved in the project from the conceptual design phase, which involved working closely with the research division of a leading F1 team. 
+                \item[2015] Implemented the control and automated sequencing of a 3 link trailer mounted manipulator for collecting and stacking bales.
+            \end{description} \\ \rowdiv
+        \Longunderstack[r]{Support Analyst \\ ViziRail \\ Adelaide}
+            & Worked on large database hotfix scripts applied to the backend of the core ViziRail product, which schedules trains for the majority of Australia's freight rail network. \\
     \end{tabular}
 
 \section{Notable Projects}
